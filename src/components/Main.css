@@ -1,0 +1,47 @@
+.main-container {
+    display:flex;
+    margin-top: 150px;
+
+}
+.main-heading {
+    
+    grid-column: 2 /  6;
+
+}
+.heading-button {
+    grid-column: 8 / 12;
+    align-items: center;
+    height: 63.818180084228516px;
+width: 219.8356170654297px;
+border-radius: 16px;
+padding: 0px 16px 0px 16px;
+background: #F4CE14;
+
+}
+.images{
+    display:grid;
+    grid-column: 2 / span 8;
+    column-gap: 50px;
+    align-items: center;
+
+    
+
+}
+
+.bruchetta
+{
+    grid-column: 1 / span 2;
+    border-radius: 16px;
+}
+.lemon
+{
+    grid-column: 6 / span 2;
+
+    border-radius: 16px;
+}
+.greek { 
+    border-radius: 16px;
+}
+
+
+    

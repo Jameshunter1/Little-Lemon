@@ -1,12 +1,17 @@
+
+
+
 body {
-  
+ 
   font-family: -apple-system, BlinkMacSystemFont, "Karla",'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-display:grid;
-grid-template-columns: 12;
+  display:grid;
+
+  
+
 }
 
 code {

@@ -1,5 +1,56 @@
-.header {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.header-container {
+  grid-column: 1 / span 11;
+  grid-row: 1/ span 11;
+    list-style: none;
+    margin-top:50px;
+    
+  }
+ 
+h2 {
+    color:#F4CE14;  
+    display:grid;
+  
+}
+
+
+.header-background {
+    display:grid;
+    background: #495E57;
+    height:346px;
+grid-column: 1 / span 11;
+    align-items: center;
+}
+.heading{
+    display: relative;
+    grid-column: 2 /  span 1;
+    grid-row: 1 / span 3;
+    margin-bottom: 40px;
+   
+
+}
+.reservetable {
+    display:grid;
+    height: 46.62711715698242px;
+width: 183px;
+left: 0px;
+border-radius: 16px;
+align-items: center;
+    background: #F4CE14;
+    border-radius: 16px;
+}
+.image{
+    grid-row: 1 / span 3;
+    margin-top:50px;
+
+    display:grid;
+    grid-column: 8 / span 2;
+}
+
+p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23.5px;
+    text-transform: capitalize;
+    color:#FFFFFF;
+    display: grid;
 }

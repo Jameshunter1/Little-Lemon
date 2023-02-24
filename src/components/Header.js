@@ -4,13 +4,27 @@ import "./Header.css"
 
 const Header = () => {
   return (
-    <div className='header'>
+    <>
+    
+      <main className='header-container'>
+            <div className='header-background'>
+            <div className="heading">
     <h2>Little Lemon</h2>
     <p>Chicago</p>
-    <p></p>
-    <img class="foodpic1"src={food} alt="food" width="296px" height="368px"/>
-    
+    <p> akfhaoifiuriafiugufgad<br/>
+        fiuahgheiughewhiughuie<br/>
+        wugehguhewiuhgiuhfdgdd<br/>
+        dddddddddddddddddddddd<br/>
+        ddddddddddddsdsfsgdsgd<br/>
+    </p>
+    <button className='reservetable'>Reserve a table</button>
     </div>
+    
+    <img className="image"src={food} alt="food" width="296px" height="368px"/>
+     </div>
+     </main>
+   
+    </>
      )
 }
 
