@@ -1,8 +1,8 @@
 .header-container {
     display: grid;
-     vertical-align: middle;
      grid-template-columns: repeat(12, 1fr);
    background: #495E57;
+   justify-content: space-between;
   }
  
 h2 {
@@ -35,13 +35,12 @@ width: 183px;
 border-radius: 16px;
 align-items: center;
     background: #F4CE14;
-    border-radius: 16px;
 }
 .image{
     
     margin-top:30px;
-    display:grid;
-    grid-column: 8/10;
+    display:flex;
+    grid-column: 10 /span  2;
    
 }
 

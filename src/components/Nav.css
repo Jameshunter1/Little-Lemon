@@ -2,18 +2,17 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-
 }
+
 .navbar-logo {
-  display: grid;
-  grid-column: 2 / 4;
-
-  vertical-align: middle;
+  grid-column: 2 / 3;
 }
+
 .navbar-links {
-  display: flex;
-  grid-column: 6 / 10;
+  display: grid;
+  grid-column: 4 / 12;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  align-items: center;
   justify-content: space-between;
   list-style: none;
 }
-
