@@ -7,8 +7,8 @@ const Header = () => {
     <>
     
       <main className='header-container'>
-            <div className='header-background'>
-            <div className="heading">
+            
+            <section className="heading">
     <h2>Little Lemon</h2>
     <p>Chicago</p>
     <p> akfhaoifiuriafiugufgad<br/>
@@ -18,10 +18,10 @@ const Header = () => {
         ddddddddddddsdsfsgdsgd<br/>
     </p>
     <button className='reservetable'>Reserve a table</button>
-    </div>
+    </section>
     
     <img className="image"src={food} alt="food" width="296px" height="368px"/>
-     </div>
+     
      </main>
    
     </>
