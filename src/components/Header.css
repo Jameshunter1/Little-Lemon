@@ -16,7 +16,7 @@ h2 {
     display:grid;
     background-color: var(--primary-color-green);
      height:346px;
-    grid-column: 1/ 12;
+    grid-column: 2/ 10;
     align-items: center;
 }
 .heading{

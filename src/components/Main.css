@@ -5,6 +5,7 @@ main{  display: grid;
 
 .heading-container {
   display: grid;
+  grid-template-columns: repeat(12,1fr);
   grid-column: 1 / 12;
   margin: 100px 0;
 }
@@ -13,25 +14,47 @@ p {
 }
 .main-heading {
     display:grid;
-  grid-column: 2 / 4;
+  grid-column: 2 / 6;
 }
 
 .heading-button {
-    display:grid;
-  grid-column: 8 / 10;
+    grid-column: 11/span 4;
+    display: grid;
   height: 63.818180084228516px;
   width: 219.8356170654297px;
   border-radius: 16px;
   background: #f4ce14;
   align-items: center;
 }
+
 .images {
-  display: flex;
-  grid-column: 2/10;
-  column-gap: 10px;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-around;
+    grid-column: 2/span 10;
+    column-gap: 10px;
+  }
   
-}
+  @media only screen and (max-width: 767px) {
+    .images {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .images img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 10px;
+    }
+  }
+  
 
 span {
   display: flex;
