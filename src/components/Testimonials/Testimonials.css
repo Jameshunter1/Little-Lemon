@@ -1,0 +1,21 @@
+.testimonials-container {
+     display:grid;
+grid-column: 1/-1 ;
+ background-color: var(--primary-color-green);
+}
+.personas {
+    display:flex; 
+   
+  
+    
+}
+
+.review1{
+    display:grid;
+    grid-column: 2/4;
+}
+.person1 {
+    position: relative;
+    width:60px;
+    height:90px;
+}

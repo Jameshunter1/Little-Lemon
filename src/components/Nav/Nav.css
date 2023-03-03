@@ -1,0 +1,24 @@
+.nav-container {
+  display:grid;
+grid-column: 1/-1
+}
+
+.navbar-logo {
+ 
+  grid-column: 2/ 4; /* Take up two columns from the start */
+ 
+}
+
+.navbar-links {
+  display: flex;
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+justify-content: space-evenly;
+  grid-column: 6/10 ;
+  
+  list-style: none;
+}
+
+
+

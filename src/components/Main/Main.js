@@ -1,8 +1,8 @@
 import React from "react";
 import "./Main.css";
-import bruchetta from "../images/bruchetta.jpeg";
-import greek from "../images/greek salad.jpg";
-import lemon from "../images/lemon dessert.jpg";
+import bruchetta from "../../images/bruchetta.jpeg";
+import greek from "../../images/greek salad.jpg";
+import lemon from "../../images/lemon dessert.jpg";
 
 const Main = () => {
   return (

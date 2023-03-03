@@ -1,0 +1,48 @@
+.header-container {
+    display:grid;
+    grid-column: 1/-1;
+  align-items: center;
+  background: #495E57;
+  
+}
+
+h2 {
+  color:#F4CE14;  
+}
+
+.header-background {
+  
+  background-color: var(--primary-color-green);
+  height: 346px;
+  grid-column: 2/ 10;
+ 
+}
+
+.heading {
+  grid-column: 2 / 4;
+  margin-bottom: 20px;
+}
+
+.reservetable {
+  height: 46.62711715698242px;
+  width: 183px;
+  border-radius: 16px;
+  align-items: center;
+  background: #F4CE14;
+}
+
+.image {
+display:absolute;
+  grid-column: 7/8;
+  margin-top:50px;
+  
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23.5px;
+  text-transform: capitalize;
+  color:#FFFFFF;
+  
+}

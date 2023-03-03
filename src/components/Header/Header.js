@@ -1,5 +1,5 @@
 import React from 'react'
-import food from "../images/food.jpg";
+import food from "../../images/food.jpg";
 import "./Header.css"
 
 const Header = () => {
@@ -18,11 +18,11 @@ const Header = () => {
         ddddddddddddsdsfsgdsgd<br/>
     </p>
     <button className='reservetable'>Reserve a table</button>
-    </section>
     
-    <img className="image"src={food} alt="food" width="296px" height="368px"/>
-     
-     </main>
+    
+   
+     </section>
+      <img className="image"src={food} alt="food" width="296px" height="400px"/></main>
    
     </>
      )

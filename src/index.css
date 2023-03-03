@@ -7,6 +7,14 @@
 --highlight-color-white: #EDEFEE;
 --highlight-color-black: #333333;
 }
+#root {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+}
+
+
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Karla",'Segoe UI', 'Roboto', 'Oxygen',
