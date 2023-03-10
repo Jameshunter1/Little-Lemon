@@ -1,10 +1,10 @@
 import React from "react";
-import About from "./About/About";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
-import Main from "./Main/Main";
-import Nav from "./Nav/Nav.js";
-import Testimonials from "./Testimonials/Testimonials";
+import About from "./About/About/About";
+import Footer from "./Footer/Footer/Footer";
+import Header from "./Header/Header/Header";
+import Main from "./Main/Main/Main";
+import Nav from "./Nav/Nav/Nav.js";
+import Testimonials from "./Testimonials/Testimonials/Testimonials";
 
 const Homepage = () => {
   return (
