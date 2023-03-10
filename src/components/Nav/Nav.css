@@ -1,0 +1,16 @@
+.nav-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height:150px;
+}
+
+.navbar-logo {
+  grid-column: 3/6;
+}
+
+.navbar-links {
+  display: flex;
+  grid-column: 6/11;
+justify-content: space-evenly;  list-style: none;
+}

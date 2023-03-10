@@ -1,0 +1,19 @@
+.testimonials-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 150px;
+}
+.testimonials-header{
+   grid-column: 6/8;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonials-images {
+    display: flex;
+    grid-column: 3/11;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+

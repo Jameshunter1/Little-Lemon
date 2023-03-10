@@ -1,0 +1,46 @@
+.header-container {
+    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+    
+}
+.header-background {
+  background: #495e57;
+  grid-column: 1/12;
+
+}
+h2 {
+  color: #f4ce14;
+}
+.content {
+display:grid;    grid-column: 3/11;
+}
+.content-left {
+    display:block;
+    grid-column: 3/4;
+ 
+}
+.reservetable {
+    
+  height: 46.62711715698242px;
+  width: 183px;
+  border-radius: 16px;
+  align-items: center;
+  background: #f4ce14;
+}
+.content-right{
+    display: grid;
+    position: relative;
+    grid-column: 8/11;
+    margin-top: 30px;
+}
+
+
+
+p {
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23.5px;
+  text-transform: capitalize;
+}

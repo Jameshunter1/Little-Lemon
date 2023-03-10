@@ -1,22 +1,23 @@
-import React from 'react'
-import About from './About'
-import Footer from './Footer'
-import Header from './Header'
-import Main from './Main'
-import Nav from './Nav'
-import Testimonials from './Testimonials'
+import React from "react";
+import About from "./About/About";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
+import Nav from "./Nav/Nav.js";
+import Testimonials from "./Testimonials/Testimonials";
 
 const Homepage = () => {
   return (
     <>
-    <Nav/>
-    <Header/>
-    <Main/>
-    <About/>
-    <Testimonials/>
-    <Footer/>
-</>
-  )
-}
+      <Nav />
+      <Header />
+      <Main />
+      <Testimonials />
+      <About />
 
-export default Homepage
+      <Footer />
+    </>
+  );
+};
+
+export default Homepage;
