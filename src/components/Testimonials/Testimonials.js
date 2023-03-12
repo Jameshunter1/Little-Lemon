@@ -11,7 +11,7 @@ import star from "../../images/Star 1.png"
 const Testimonials = () => {
   return (
     <>
-    <section className='testimonials-container'>
+    <main className='testimonials-container'>
         <h1 className="testimonials-header">Testimonials</h1>
         <section className='testimonials-images'>
         <article className="testimonials-title">
@@ -26,7 +26,11 @@ const Testimonials = () => {
          
   <q>The service at The Little Lemon was impeccable. The staff were friendly, attentive, and made our dining experience truly enjoyable.</q>      
         <section className='stars'>
-          <img className="star"src={star}/>
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star"src={star}/>
         </section> </article>
         
         <article className='testimonials-title'>
@@ -41,7 +45,11 @@ const Testimonials = () => {
          
         <q>I was pleasantly surprised by The Little Lemon's vegan options. The dishes were not only healthy but also delicious and satisfying.</q>
          <section className='stars'>
-          <img className="star"src={star}/>
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star"src={star}/>
         </section></article>
         <article className='testimonials-title'>
             <h3>Rick Ross</h3>
@@ -54,7 +62,11 @@ const Testimonials = () => {
           />
         <q>The Little Lemon's dishes burst with fresh, zesty flavors! A must-try for anyone craving a refreshing meal.</q>
         <section className='stars'>
-          <img className="star"src={star}/>
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star"src={star}/>
         </section></article>
         <article className='testimonials-title'>
             <h3>Rick Ross</h3>
@@ -66,11 +78,14 @@ const Testimonials = () => {
             height="80px"
           />
         <q>This cozy restaurant may be small, but its menu packs a big punch. The Little Lemon's fusion of sweet and savory flavors is simply delightful.</q><section className='stars'>
-          <img className="star"src={star}/>
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star" src={star} />
+              <img className="star"src={star}/>
         </section>
         </article>
         </section>
-        </section>
+        </main>
         </>
   )
 }
