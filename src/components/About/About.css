@@ -1,0 +1,33 @@
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 100px;
+    position: relative;
+    }
+    
+    .about-left {display:grid;
+    grid-column: 3/6;
+    position: relative;
+   
+    }
+    
+    .about-right {
+    grid-column: 6/11;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 100px;
+    }
+    
+    .adrian {
+  position: relative;
+    z-index: 1;
+    padding-left: 200px;
+    top:100px
+    }
+    
+    .mario {
+      position: absolute;
+    z-index: 2;
+    top: -10px;
+    right: 100px;
+    }

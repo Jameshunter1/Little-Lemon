@@ -14,47 +14,60 @@ const Testimonials = () => {
     <section className='testimonials-container'>
         <h1 className="testimonials-header">Testimonials</h1>
         <section className='testimonials-images'>
-        <article className="title">
+        <article className="testimonials-title">
             <h3> Janet Harrison </h3>
           <img
             className="person1"
             src={persona1}
             alt="lemon dessert"
-            width="60px"
-            height="38px"
+            width="100px"
+            height="80px"
           />
-          <img src={star}/>
-        </article>
+         
+  <q>The service at The Little Lemon was impeccable. The staff were friendly, attentive, and made our dining experience truly enjoyable.</q>      
+        <section className='stars'>
+          <img className="star"src={star}/>
+        </section> </article>
         
-        <article className='title'>
+        <article className='testimonials-title'>
             <h3>Jane Fonda</h3>
         <img
             className="person2"
             src={persona2}
             alt="lemon dessert"
-            width="60px"
-            height="38px"
+            width="100px"
+            height="80px"
           />
-        </article>
-        <article className='title'>
+         
+        <q>I was pleasantly surprised by The Little Lemon's vegan options. The dishes were not only healthy but also delicious and satisfying.</q>
+         <section className='stars'>
+          <img className="star"src={star}/>
+        </section></article>
+        <article className='testimonials-title'>
             <h3>Rick Ross</h3>
         <img
             className="person3"
             src={persona3}
             alt="lemon dessert"
-            width="60px"
-            height="38px"
+            width="100px"
+            height="80px"
           />
-        </article>
-        <article className='title'>
+        <q>The Little Lemon's dishes burst with fresh, zesty flavors! A must-try for anyone craving a refreshing meal.</q>
+        <section className='stars'>
+          <img className="star"src={star}/>
+        </section></article>
+        <article className='testimonials-title'>
             <h3>Rick Ross</h3>
         <img
             className="person3"
             src={persona4}
             alt="lemon dessert"
-            width="60px"
-            height="38px"
+            width="100px"
+            height="80px"
           />
+        <q>This cozy restaurant may be small, but its menu packs a big punch. The Little Lemon's fusion of sweet and savory flavors is simply delightful.</q><section className='stars'>
+          <img className="star"src={star}/>
+        </section>
         </article>
         </section>
         </section>

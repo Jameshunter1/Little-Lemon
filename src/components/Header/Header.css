@@ -1,27 +1,28 @@
-.header-container {
-    align-items: center;
+.header-container { 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+ 
+  padding-bottom: 60px;
     
 }
 .header-background {
-  background: #495e57;
-  grid-column: 1/12;
+  display:grid;
+    background: #495e57;
+  grid-column: 3/11;
+  max-height: 346px;
+position: relative;
 
 }
-h2 {
-  color: #f4ce14;
-}
-.content {
-display:grid;    grid-column: 3/11;
-}
+
+
 .content-left {
-    display:block;
-    grid-column: 3/4;
- 
+display: grid;
+max-width: 461px;
+}
+.header-title{
+  color:var(--primary-color-yellow)
 }
 .reservetable {
-    
   height: 46.62711715698242px;
   width: 183px;
   border-radius: 16px;
@@ -29,9 +30,9 @@ display:grid;    grid-column: 3/11;
   background: #f4ce14;
 }
 .content-right{
-    display: grid;
-    position: relative;
-    grid-column: 8/11;
+  display: flex;
+justify-content: flex-end;
+    grid-column: 12/12;
     margin-top: 30px;
 }
 
@@ -39,6 +40,17 @@ display:grid;    grid-column: 3/11;
 
 p {
 
+}
+.header-title {
+  font-size: 64px;
+
+  color: var(--primary-color-yellow);
+}
+.header-subtitle {
+  color:white;
+}
+.header-text {
+  color:white;  
   font-weight: 400;
   font-size: 16px;
   line-height: 23.5px;

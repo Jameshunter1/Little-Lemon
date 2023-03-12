@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.css";
-import bruchetta from "../../images/bruchetta.jpeg";
+import bruchetta from "../../images/bruchetta.jpg";
 import greek from "../../images/greek salad.jpg";
 import lemon from "../../images/lemon dessert.jpg";
 import vector from "../../images/Vector.png";
@@ -13,15 +13,13 @@ const Main = () => {
 
         <button className="heading-button">Online Menu</button>
       </section>
+      <section className="images-container">
       <section className="images">
         <article className="title">
-          {" "}
           <img
             className="bruchetta"
             src={bruchetta}
             alt="bruchetta"
-            
-          
           />
           <span className="span">
           <p>Bruchetta</p>
@@ -40,7 +38,7 @@ const Main = () => {
          <p className="desc">The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
          <span className="delivery-span">
             <p>Order Delivery</p>
-            <img src={vector} alt="delivery-icon"/>
+            <img  className="delivery-icon" src={vector} alt="delivery-icon"/>
             </span>
        </article>
          
@@ -49,18 +47,17 @@ const Main = () => {
             className="lemon"
             src={lemon}
             alt="lemon dessert"
-        
           />
           <span className="span">
           <p>Lemon Dessert</p>
           <p className="price">$12.99</p></span>
           <p className="desc">This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-          
           <span className="delivery-span">
             <p>Order Delivery</p>
-            <img src={vector} alt="delivery icon"/>
+            <img className="delivery-icon"src={vector} alt="delivery icon"/>
           </span>
-        </article>
+            </article>
+          </section>
       </section>
       
     </main></>

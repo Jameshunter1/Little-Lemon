@@ -1,16 +1,20 @@
+* {
+  margin:0;
+  padding:0
+}
+
+
 /* Style Guide */
 :root{
  --primary-color-green: #495e57;
  --primary-color-yellow: #f4ce14;
 --secondary-color-orange: #ee9972;
---seconary-color-beige: #FBDABB;
+--secondary-color-beige: #FBDABB;
 --highlight-color-white: #EDEFEE;
 --highlight-color-black: #333333;
 }
 #root {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px;
 }
 
 
@@ -19,10 +23,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Karla-regular";
   -moz-osx-font-smoothing: grayscale;
-  
-}
-#root {
-  display: grid;
   
 }
 p {

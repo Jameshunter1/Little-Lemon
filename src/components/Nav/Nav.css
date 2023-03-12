@@ -1,16 +1,19 @@
 .nav-container {
   align-items: center;
+  align-content: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  height:150px;
+  margin:60px;
+ 
 }
-
 .navbar-logo {
+  display:grid;
   grid-column: 3/6;
 }
 
 .navbar-links {
   display: flex;
+ flex-wrap: wrap;
   grid-column: 6/11;
 justify-content: space-evenly;  list-style: none;
 }
