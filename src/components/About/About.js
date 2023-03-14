@@ -11,7 +11,7 @@ const About = () => {
       
         <section className="about-left">
           <article className='about-title'>
-    <h2>Little Lemon</h2>
+    <h2 className='about-heading'>Little Lemon</h2>
     <p>Chicago</p></article>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque nisi et commodo maximus. Mauris sollicitudin faucibus interdum. Etiam ornare eu eros nec interdum. Etiam blandit euismod ligula at molestie. Fusce malesuada dui ut ex lacinia consequat. Pellentesque aliquam enim orci. Phasellus tincidunt libero lacus, in sagittis leo sodales ac. Mauris quis felis maximus, elementum est vitae, sodales risus.</p>
    </section> 

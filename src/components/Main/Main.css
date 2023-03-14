@@ -3,6 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
   margin-top: 50px;
+
 }
 
 .main-heading {
@@ -30,7 +31,7 @@ padding: 0px 16px 0px 16px;
 }
 .images-container{
 display: flex;
-justify-content: center;
+
   grid-column: 3/11;
 
     }
@@ -39,14 +40,14 @@ display:flex;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   justify-content: space-evenly;
- gap: 17px;
+ gap: 30px;
 }
 
 
 
 .title{
   display: grid;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: var(--secondary-color-beige);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;

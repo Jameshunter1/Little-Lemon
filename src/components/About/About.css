@@ -2,32 +2,76 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding-top: 100px;
-    position: relative;
+    
     }
     
     .about-left {display:grid;
     grid-column: 3/6;
-    position: relative;
+    align-items: center;
+
    
     }
-    
+    .about-heading {
+   
+font-size: 64px;
+font-weight: 400;
+line-height: 75px;
+letter-spacing: 0em;
+text-align: justified;
+
+    }
     .about-right {
-    grid-column: 6/11;
-    position: relative;
-    z-index: 2;
+      display:flex;
+    grid-column: 6/10;
+  flex-wrap: wrap;
+   
     margin-bottom: 100px;
     }
     
     .adrian {
+   
+
   position: relative;
     z-index: 1;
-    padding-left: 200px;
-    top:100px
+   
+    
     }
     
     .mario {
-      position: absolute;
+     position: relative;
     z-index: 2;
-    top: -10px;
-    right: 100px;
+    
+  top: 100px;
+  left: 200px;
     }
+
+   /*Media Queries*/
+   
+    @media (max-width: 746px) {
+  .about-container {
+    grid-template-columns: 4fr;
+    padding-top: 50px;
+  }
+  .about-left {
+    grid-column: 1/4;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .about-right {
+    margin:20px 0;
+    grid-column: 2;
+    display: flex;
+    
+    justify-content: center;
+  }
+  .adrian {
+    width: 50%;
+    margin: 20px 0;
+    right:50px;
+  }
+  .mario {
+    width: 50%;
+    margin: 20px 0;
+    left:50px;
+  }
+}
