@@ -39,7 +39,7 @@ display: flex;
 display:flex;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  justify-content: space-evenly;
+  justify-content: center;
  gap: 30px;
 }
 

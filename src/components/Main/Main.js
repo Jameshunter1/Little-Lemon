@@ -6,52 +6,43 @@ import lemon from "../../images/lemon dessert.jpg";
 import vector from "../../images/Vector.png";
 
 // Define an array of available times
-const availableTimes = [
-"11:00 AM",
-"12:00 PM",
-"1:00 PM",
-"5:00 PM",
-"6:00 PM",
-"7:00 PM"
-];
+const availableTimes = [  "11:00 AM",  "12:00 PM",  "1:00 PM",  "5:00 PM",  "6:00 PM",  "7:00 PM"];
 
-// Function to initialize the times state with the available times
-const initializeTimes = () => {
-return availableTimes;
-};
-
-// Function to update the times state based on actions
-const updateTimes = (times, action) => {
-switch (action.type) {
-// If the action type is "update", return the payload as the new state
-case 'update':
-return action.payload;
-// Otherwise, return the original state
-default:
-return times;
+// Define a function to initialize the available times
+export function initializeTimes(availableTimes) {
+  // Create an empty object to store the available times
+  const initialTimes = {};
+  // Loop through the available times and add each time to the object with a value of true
+  availableTimes?.forEach((time) => {
+    initialTimes[time] = true;
+  });
+  // Return the object containing the available times
+  return initialTimes;
 }
-};
 
-// Define the main component
+// Define a function to update the available times based on the selected date
+export function updateTimes() {
+  // For now, return the same available times regardless of the date
+  return availableTimes;
+}
+
 const Main = () => {
-// Use the useReducer hook to initialize the times state
-// Pass the updateTimes function and initializeTimes function as arguments
-const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  // Initialize the selected time to false
+  const [selectedTime, setSelectedTime] = useState(false);
 
-// Use the useState hook to initialize the selectedDate state
-const [selectedDate, setSelectedDate] = useState("");
+  // Define a function to handle the selection of a time
+  const handleTimeSelection = (time) => {
+    // Set the selected time
+    setSelectedTime(time);
+    // Update the available times state to mark the selected time as unavailable
+    setAvailableTimesState({ [time]: false });
+  };
 
-// Update the selected date state
-setSelectedDate(selectedDate);
+  // Initialize the available times state using the initializeTimes function and the availableTimes array
+  const [availableTimesState, setAvailableTimesState] = useReducer(initializeTimes, availableTimes);
 
-// Call the updateTimes function with the current availableTimes and selected date
-const newTimes = updateTimes(selectedDate, availableTimes);
 
-// Update the times state with the new value
-dispatch({ type: 'update', payload: newTimes });
-
-  return (
-    <>
+      return(
     <main className="main-container">
       <section className="heading-container">
         <h2 className="main-heading">This Weeks Specials!</h2>
@@ -105,7 +96,7 @@ dispatch({ type: 'update', payload: newTimes });
           </section>
       </section>
       
-    </main></>
+    </main>
   );
 };
 export default Main;

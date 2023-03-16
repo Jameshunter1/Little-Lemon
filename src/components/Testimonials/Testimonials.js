@@ -3,7 +3,6 @@ import persona1 from "../../images/persona1.png"
 import persona2 from "../../images/persona2.png"
 import persona3 from "../../images/persona3.png"
 import persona4 from "../../images/persona4.png"
-
 import "./Testimonials.css"
 import star from "../../images/Star 1.png"
 
@@ -15,7 +14,7 @@ const Testimonials = () => {
         <h1 className="testimonials-header">Testimonials</h1>
         <section className='testimonials-images'>
         <article className="testimonials-title">
-            <h3> Janet Harrison </h3>
+            <h3> Janet Hart </h3>
           <img
             className="person1"
             src={persona1}

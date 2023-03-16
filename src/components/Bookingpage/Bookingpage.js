@@ -1,68 +1,71 @@
-import React, {  useState } from 'react'
-import "./Bookingpage.css"
+import React, { useState } from 'react';
+import "./Bookingpage.css";
 
-const BookingForm = (selectedDate) => {
-
+// Defining a functional component
+const BookingForm = ({ selectedDate, availableTimes, setAvailableTimes, dispatch }) => {
+  // Setting up state with the useState hook
   const [bookings, setbookings] = useState({
     date: "",
     time: "",
     guests: "",
-    occasion: "",
-      
-  })
-  
-  const handleDateChange = (e) => {
-    const newDate = e.target.value;
-    setbookings({ ...bookings, date: e.target.value });
-    selectedDate(newDate);
-  }
+    occasion: "", 
+  });
+ 
   return (
     <>
       <section className='booking-container'>
         <form  className="form">
+
+          {/* Label for date input */}
           <label htmlFor="res-date">Choose date</label>
-          <input type="date" id="res-date" name="res-date" value={bookings.date}
-            onChange={handleDateChange} />
+
+          {/* Date input */}
+          <input
+            type="date"
+            id="res-date"
+            name="res-date"
+            value={bookings.date} // The value of this input is set to the "date" property of the "bookings" state
+            onChange={(e) => setbookings({ ...bookings, date:e.target.value })}  // When the user selects a new date, this updates the "bookings" state to reflect the new date    
+          />
+
+          {/* Label for time input */}
           <label htmlFor="res-time">Choose time</label>
-          <select
+
+          {/* Time input */}
+          <input
+            type="time"
             id="res-time"
             name="res-time"
-            value={bookings.time}
-            onChange={(e) => setbookings({ ...bookings, time: e.target.value })}
+            value={bookings.time} // The value of this input is set to the "time" property of the "bookings" state
+            onChange={(e) => setbookings({ ...bookings, time:e.target.value })} // When the user selects a new value from the dropdown, this updates the "bookings" state to reflect the new value
           >
-            {bookings.availabileTimes?.map((time, index) => (
+            {/* Generating options for the dropdown from the "availableTimes" state */}
+            {availableTimes?.map((time, index) => (
               <option key={index} value={time}>{time}</option>
             ))}
-          </select>
-          <label htmlFor="guests">Number of guests</label>
+          </input>
           <input
-            type="number"
-            placeholder="1"
-            min="1"
-            max="10"
-            id="guests"
-            name="guests"
-            value={bookings.guests}
+  type="number"
+  id="res-guests"
+  name="res-guests"
+  value={bookings.guests}
             onChange={(e) => setbookings({ ...bookings, guests: e.target.value })}
-          />
-          <label htmlFor="occasion">Occasion</label>
-          <select
-            id="occasion"
-            name="occasion"
-            value={bookings.occasion}
+/>
+
+<select
+  type="dropdown"
+  id="res-occasion"
+  name="res-occasion"
+  value={bookings.occasion}
             onChange={(e) => setbookings({ ...bookings, occasion: e.target.value })}
-          >
-            <option>Birthday</option>
-            <option>Anniversary</option>
+          ><option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Business">Business</option>
+            <option value="Other">Other</option>
           </select>
-          <input type="submit" value="Make Your reservation" />
         </form>
       </section>
-                        
-                   
     </>
-    )
-}
-
-
-export default BookingForm
+  );
+};
+export default BookingForm;

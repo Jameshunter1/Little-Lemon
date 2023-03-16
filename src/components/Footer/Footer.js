@@ -9,11 +9,11 @@ const Footer = () => {
       <main className='footer-container'>
         <section className='footer-logo'>
 
-          <img src={restaurant} alt="restaurant" width="168px" height="295px"/>
+          <img src={restaurant} alt="restaurant" width="268px" height="295px"/>
         </section>
       <section className='footer-menu'>
       <article className='menu-left'>
-        <ul>
+        <ul className='menu-left-list'>
         <li><a href="#name">Name</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
@@ -22,7 +22,7 @@ const Footer = () => {
         </ul>
         </article>
         <article className='menu-right'>
-        <ul>
+        <ul className='menu-right-list'>
             <li>Contact
             </li>
             <li>Address
