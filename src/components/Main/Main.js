@@ -1,61 +1,23 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer} from "react";
 import "./Main.css";
 import bruchetta from "../../images/bruchetta.jpg";
 import greek from "../../images/greek salad.jpg";
 import lemon from "../../images/lemon dessert.jpg";
 import vector from "../../images/Vector.png";
 
-// Define an array of available times
-const availableTimes = [
-"11:00 AM",
-"12:00 PM",
-"1:00 PM",
-"5:00 PM",
-"6:00 PM",
-"7:00 PM"
-];
+ 
 
-// Function to initialize the times state with the available times
-const initializeTimes = () => {
-return availableTimes;
-};
-
-// Function to update the times state based on actions
-const updateTimes = (times, action) => {
-switch (action.type) {
-// If the action type is "update", return the payload as the new state
-case 'update':
-return action.payload;
-// Otherwise, return the original state
-default:
-return times;
-}
-};
 
 // Define the main component
 const Main = () => {
-// Use the useReducer hook to initialize the times state
-// Pass the updateTimes function and initializeTimes function as arguments
-const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
-
-// Use the useState hook to initialize the selectedDate state
-const [selectedDate, setSelectedDate] = useState("");
-
-// Update the selected date state
-setSelectedDate(selectedDate);
-
-// Call the updateTimes function with the current availableTimes and selected date
-const newTimes = updateTimes(selectedDate, availableTimes);
-
-// Update the times state with the new value
-dispatch({ type: 'update', payload: newTimes });
+  
 
   return (
     <>
     <main className="main-container">
       <section className="heading-container">
         <h2 className="main-heading">This Weeks Specials!</h2>
-
+          
         <button className="heading-button">Online Menu</button>
       </section>
       <section className="images-container">

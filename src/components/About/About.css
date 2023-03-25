@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding-top: 100px;
+    gap:10px;
     
     }
     
@@ -17,61 +18,63 @@ font-size: 64px;
 font-weight: 400;
 line-height: 75px;
 letter-spacing: 0em;
-text-align: justified;
 
     }
     .about-right {
       display:flex;
     grid-column: 6/10;
-  flex-wrap: wrap;
-   
+
+   flex-wrap: wrap;
     margin-bottom: 100px;
     }
     
-    .adrian {
-   
-
+    .mario {
   position: relative;
     z-index: 1;
-   
+    top: 100px;
+  left: 200px;
     
     }
     
-    .mario {
+    .adrian {
      position: relative;
     z-index: 2;
     
-  top: 100px;
-  left: 200px;
+ 
     }
 
    /*Media Queries*/
    
     @media (max-width: 746px) {
   .about-container {
-    grid-template-columns: 4fr;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
     padding-top: 50px;
+    flex-wrap: wrap;
   }
   .about-left {
-    grid-column: 1/4;
-    text-align: center;
-    padding: 0 10px;
+grid-column: 3/11;
+  
+  align-content: center;
   }
   .about-right {
-    margin:20px 0;
-    grid-column: 2;
-    display: flex;
+    margin-top: 50px;
+ grid-column: 3/11;
+ justify-content: center;
     
-    justify-content: center;
-  }
-  .adrian {
-    width: 50%;
-    margin: 20px 0;
-    right:50px;
+  
   }
   .mario {
-    width: 50%;
-    margin: 20px 0;
+  width: 50%;
+    height:100%;
+  z-index: 2;
     left:50px;
   }
+  .adrian {  width: 50%;
+    z-index: 1;
+    height:100%;
+    right:50px;
+    
+  }
+
 }

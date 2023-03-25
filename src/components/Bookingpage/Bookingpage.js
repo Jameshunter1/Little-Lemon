@@ -1,7 +1,7 @@
 import React, {  useState } from 'react'
 import "./Bookingpage.css"
 
-const BookingForm = (selectedDate) => {
+const BookingForm = ({availableTimes, dispatch, handleUpdateTimes}) => {
 
   const [bookings, setbookings] = useState({
     date: "",
@@ -11,18 +11,22 @@ const BookingForm = (selectedDate) => {
       
   })
   
-  const handleDateChange = (e) => {
-    const newDate = e.target.value;
-    setbookings({ ...bookings, date: e.target.value });
-    selectedDate(newDate);
-  }
+
   return (
     <>
       <section className='booking-container'>
         <form  className="form">
           <label htmlFor="res-date">Choose date</label>
-          <input type="date" id="res-date" name="res-date" value={bookings.date}
-            onChange={handleDateChange} />
+           <input
+      type="date"
+      id="res-date"
+      name="res-date"
+      value={bookings.date}
+      onChange={(e) => {
+        setbookings({ ...bookings, date: e.target.value });
+        handleUpdateTimes();
+      }}
+    />
           <label htmlFor="res-time">Choose time</label>
           <select
             id="res-time"
@@ -30,7 +34,7 @@ const BookingForm = (selectedDate) => {
             value={bookings.time}
             onChange={(e) => setbookings({ ...bookings, time: e.target.value })}
           >
-            {bookings.availabileTimes?.map((time, index) => (
+            {availableTimes?.map((time, index) => (
               <option key={index} value={time}>{time}</option>
             ))}
           </select>

@@ -9,7 +9,7 @@ const Footer = () => {
       <main className='footer-container'>
         <section className='footer-logo'>
 
-          <img src={restaurant} alt="restaurant" width="168px" height="295px"/>
+          <img src={restaurant} alt="restaurant" width="200px" height="295px"/>
         </section>
       <section className='footer-menu'>
       <article className='menu-left'>

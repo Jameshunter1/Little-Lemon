@@ -50,3 +50,9 @@ justify-content: flex-end;
   line-height: 23.5px;
   text-transform: capitalize;
 }
+/* Media Queries */
+@media (max-width: 746px) {
+  .header-text{
+    display:none
+  }
+}

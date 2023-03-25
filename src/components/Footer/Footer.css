@@ -1,7 +1,7 @@
 .footer-container {
     display: grid ;
     grid-template-columns: repeat(12, 1fr);
-padding: 60px 0;
+padding-top:100px;;
    
   }
   .footer-logo{

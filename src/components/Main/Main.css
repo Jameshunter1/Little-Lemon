@@ -31,16 +31,18 @@ padding: 0px 16px 0px 16px;
 }
 .images-container{
 display: flex;
+  justify-content: space-between;
+
 
   grid-column: 3/11;
 
     }
 .images {
+
 display:flex;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  justify-content: space-evenly;
- gap: 30px;
+  justify-content: space-between;
 }
 
 
@@ -51,22 +53,15 @@ display:flex;
   background-color: var(--secondary-color-beige);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
- 
-
-}
-.bruchetta {
- width:100%;
-  height: 200px;
+  overflow: hidden; /* hide any overflow */
 }
 
-.lemon {
-width:100%;
-  height: 200px;
-}
-
+.bruchetta,
+.lemon,
 .greek {
-width:100%;
-  height: 200px;
+  width: 100%;
+  height: 200px; /* make sure the image fills the height of .title */
+  object-fit: cover; /* make sure the image doesn't stretch */
 }
 
 .delivery-span {
