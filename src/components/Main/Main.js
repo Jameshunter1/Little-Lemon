@@ -1,4 +1,4 @@
-import React, { useReducer} from "react";
+import React from "react";
 import "./Main.css";
 import bruchetta from "../../images/bruchetta.jpg";
 import greek from "../../images/greek salad.jpg";
@@ -7,13 +7,10 @@ import vector from "../../images/Vector.png";
 
  
 
-
-// Define the main component
 const Main = () => {
-  
-
+ 
   return (
-    <>
+        <>
     <main className="main-container">
       <section className="heading-container">
         <h2 className="main-heading">This Weeks Specials!</h2>
@@ -67,7 +64,8 @@ const Main = () => {
           </section>
       </section>
       
-    </main></>
+      </main>
+      </>
   );
 };
 export default Main;

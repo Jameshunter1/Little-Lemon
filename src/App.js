@@ -4,13 +4,13 @@ import Footer from "./components/Footer/Footer.js";
 import Testimonials from "./components/Testimonials/Testimonials.js";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage.js";
-import BookingForm from "./components/Bookingpage/Bookingpage.js";
+import BookingPage from "./components/Bookingpage/BookingPage.js";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/booking" element={<BookingForm />} />
+        <Route path="/booking" element={<BookingPage />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<Header />} />
         <Route path="/menu" element={<Main />} />

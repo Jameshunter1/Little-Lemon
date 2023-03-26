@@ -20,7 +20,8 @@ display: grid;
 max-width: 461px;
 }
 .header-title{
-  color:var(--primary-color-yellow)
+  color:var(--primary-color-yellow);
+  margin:0;
 }
 .reservetable {
   height: 46.62711715698242px;

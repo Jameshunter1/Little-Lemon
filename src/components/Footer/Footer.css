@@ -1,31 +1,40 @@
 .footer-container {
     display: grid ;
     grid-template-columns: repeat(12, 1fr);
-padding-top:100px;;
+padding-top:200px;
+    margin-bottom: 50px;
+  
    
   }
   .footer-logo{
-   
-    grid-column:3/5;
+    
+    grid-column:3/6;
+   align-items: center;
    
   }
   .footer-menu {
-    display: flex;
+    display:flex;
     align-items: center;
-    justify-content: space-evenly;
-    grid-column: 4/11; 
+    grid-column: 6/11; 
    
   }
   
   .menu-left {
     display: grid;
-    grid-column: 3/7;
+    grid-column: 6/8;
+    list-style: none;
    
   }
+  .menu-left-list{
+    list-style: none;
+  }
   .menu-right {
+    list-style: none;
     display: grid;
-    grid-column: 7/11; 
-    justify-content: space-evenly;
+    grid-column: 7/10; 
     
+  }
+  .menu-right-list{
+    list-style: none;
   }
   
