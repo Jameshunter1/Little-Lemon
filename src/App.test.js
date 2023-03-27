@@ -19,8 +19,6 @@ import { initializeTimes, updateTimes} from "./components/Main/Main.js";
 //   });
 // });
 
-
-
 //Test 2: updateTimes returns an array with the provided time set to the provided value
 describe('updateTimes', () => {
   it('should return the same value that is provided in the state', () => {
