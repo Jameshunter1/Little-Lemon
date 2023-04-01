@@ -17,15 +17,16 @@ const Header = () => {
             <p className='header-subtitle'>Chicago</p>
             <p className='header-text'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
 
-      <button className="reservetable">
+     
         <Link
           to="/booking"
           className="reservetable"
         
-        >
+        > <button className="reservetable">
           Reserve a table
-        </Link>
-      </button>           
+              </button>
+            </Link>
+              
     
         </section>    
 <section className='content-right'>    

@@ -1,0 +1,87 @@
+.confirmation-container {
+  background-color: var(--secondary-color-beige);
+  opacity: 0.9;
+
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+.confirmation-box{
+  background-image: url('../../../images/foodvid.mp4');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+
+.confirmation-box video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+.confirmation-background {
+  position: relative;
+}
+
+.confirmation-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+  
+.confirmation-message{
+  color: var(--primary-color-green);
+  font-size: 36px;
+  padding: 50px;
+}
+
+.confirmation-details {
+  color: var(--highlight-color-black);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.confirmation-contact {
+  background-color: var(--highlight-color-beige);
+ 
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-contact h2 {
+  color: var(--primary-color-green);
+  font-size: 24px;
+ 
+}
+
+.confirmation-contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.confirmation-contact li {
+  color: var(--highlight-color-black);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.confirmation-contact li:last-child {
+  margin-bottom: 0;
+}

@@ -1,8 +1,19 @@
 import {  useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Breadcrumb from "../Breadcrumb";
+import { submitAPI } from "./BookingAPI";
 import "./BookingPage.css"
-const BookingForm = ({ availableTimes, dispatch, updateTimes }) => {
+
+const BookingForm = ({ availableTimes, dispatch, updateTimes}) => {
      
-   
+  const navigate = useNavigate();
+  
+  function submitForm(formData) {
+    const result = submitAPI(formData);
+    if (result) {
+      navigate('/booking-confirmed');
+    }
+  }
   // Setting up state with the useState hook
   const [bookings, setbookings] = useState({
     date: "",
@@ -15,16 +26,25 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes }) => {
   // The handleDateChange function is called when the date input value changes
 const handleDateChange = (e) => {
   setbookings({ ...bookings, date: e.target.value });
-  dispatch({ type: 'UPDATE_TIMES', payload: [] }); // Clear the availableTimes state
+  dispatch({ type: 'UPDATE_TIMES', times: [] }); // Clear the availableTimes state
   const date = new Date(e.target.value);
   updateTimes(date); // Dispatch state change when the date is changed
 };
- 
+ function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    submitForm(formData);
+  }
   return (
     <>
       <section className='booking-container'>
-        <h1>Book a table with us!</h1>
-        <form className="form">
+         <Breadcrumb paths={[
+        { name: 'Home', url: '/' },
+        
+   
+  ]}/> <h1 className="form-header">Book a table with us!</h1>
+        
+        <form className="form" onSubmit={handleSubmit}>
 
           {/* Label for date input */}
           <label htmlFor="res-date">Choose date</label>
@@ -71,10 +91,15 @@ const handleDateChange = (e) => {
             value={bookings.occasion}
             onChange={(e) => setbookings({ ...bookings, occasion: e.target.value })}
           >
+            
             <option>Birthday</option>
             <option>Anniversary</option>
+            <option>Business meeting</option>
+            <option>Other</option>
           </select>
-          <input type="submit" value="Make Your reservation" />
+          <Link to="/booking-confirmed">
+            <input type="submit" value="Make Your reservation" />
+            </Link>
         </form>
       </section>                
     </>
