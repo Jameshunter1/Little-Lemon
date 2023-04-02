@@ -28,6 +28,7 @@ top: 51.662353515625px;
 border-radius: 16px;
 padding: 0px 16px 0px 16px;
   background: #F4CE14;
+  cursor : pointer;
 }
 .images-container{
 display: flex;

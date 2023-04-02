@@ -29,6 +29,7 @@ max-width: 461px;
   border-radius: 16px;
   align-items: center;
   background: #f4ce14;
+  cursor: pointer;
 }
 .content-right{
   display: flex;
