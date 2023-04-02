@@ -7,7 +7,10 @@ const seededRandom = function (seed) {
     };
 }
 
-const fetchAPI = async function(date) {
+const fetchAPI = async function (date) {
+      if (!(date instanceof Date) || isNaN(date)) {
+    throw new Error('Invalid date parameter');
+  }
     let result = [];
     let random = seededRandom(date?.getDate());
 

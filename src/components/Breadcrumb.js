@@ -3,7 +3,7 @@ import './Breadcrumb.css';
 
 const Breadcrumb = ({ paths }) => {
   return (
-    <nav aria-label="breadcrumb" className="breadcrumb-container">
+    <nav aria-label="breadcrumb" className="breadcrumb">
       <ol className="breadcrumb-list">
         {paths.map((path, index) => (
           <li key={index} className="breadcrumb-item">

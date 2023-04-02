@@ -1,108 +1,161 @@
-import {  useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Breadcrumb from "../Breadcrumb";
-import { submitAPI } from "./BookingAPI";
 import "./BookingPage.css"
 
-const BookingForm = ({ availableTimes, dispatch, updateTimes}) => {
-     
-  const navigate = useNavigate();
-  
-  function submitForm(formData) {
-    const result = submitAPI(formData);
-    if (result) {
-      navigate('/booking-confirmed');
-    }
-  }
+const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handleSubmit }) => {
   // Setting up state with the useState hook
-  const [bookings, setbookings] = useState({
+  const [bookings, setBookings] = useState({
     date: "",
     time: "",
     guests: "",
-    occasion: "",  
+    occasion: "",
   });
 
+  // Form Validation
+  const [dateValid, setDateValid] = useState(false);
+  const [timeValid, setTimeValid] = useState(false);
+  const [guestsValid, setGuestsValid] = useState(false);
+  const [occasionValid, setOccasionValid] = useState(false);
+  const [formValid, setFormValid] = useState(false);
+
+  // Validate date
+  const validateDate = (date) => {
+    const currentDate = new Date();
+    const selectedDate = new Date(date);
+    const isValid =
+      selectedDate instanceof Date &&
+      !isNaN(selectedDate) &&
+      selectedDate >= currentDate;
+    setDateValid(isValid);
+    validateform();
+    return isValid;
+  };
+
+  // Validate time
+  const validateTime = (time) => {
+    const isValid = availableTimes.includes(time);
+    setTimeValid(isValid);
+    validateform();
+    return isValid;
+  };
+
+  // Validate guests
+  const validateGuests = (guests) => {
+    const isValid = guests > 1 && guests < 10;
+    setGuestsValid(isValid);
+    validateform();
+    return isValid;
+  };
+
+  // Validate occasion
+  const validateOccasion = (occasion) => {
+    const isValid = occasion !== "";
+    setOccasionValid(isValid);
+    validateform();
+    return isValid;
+  };
+
+  // Validate Form
+  const validateform = () => {
+    const isFormValid = dateValid && timeValid && guestsValid && occasionValid;
+    setFormValid(isFormValid);
+  };
 
   // The handleDateChange function is called when the date input value changes
-const handleDateChange = (e) => {
-  setbookings({ ...bookings, date: e.target.value });
-  dispatch({ type: 'UPDATE_TIMES', times: [] }); // Clear the availableTimes state
-  const date = new Date(e.target.value);
-  updateTimes(date); // Dispatch state change when the date is changed
-};
- function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    submitForm(formData);
-  }
+  const handleDateChange = (e) => {
+    setBookings({ ...bookings, date: e.target.value });
+    validateDate(e.target.value);
+    dispatch({ type: 'UPDATE_TIMES', times: [] }); // Clear the availableTimes state
+    const date = new Date(e.target.value);
+    updateTimes(date); // Dispatch state change when the date is changed
+  };
+
+  // The handleSubmit function is called when the form is submitted
+  
+
+
   return (
     <>
-      <section className='booking-container'>
-         <Breadcrumb paths={[
+      <main className='booking-container'>
+     
+       <Breadcrumb  paths={[
         { name: 'Home', url: '/' },
         
    
-  ]}/> <h1 className="form-header">Book a table with us!</h1>
-        
-        <form className="form" onSubmit={handleSubmit}>
-
-          {/* Label for date input */}
-          <label htmlFor="res-date">Choose date</label>
-           {/* Date input */}
+        ]}  />
+        <h1 className="form-header">Book a table with us!</h1>  
+        <form className="booking-form" onSubmit={handleSubmit}>
+          <label htmlFor="date">Date:</label>
           <input
-            type='date'
-            id='res-date'
-            name='res-date'
-            value={bookings.date} // The value of this input is set to the "date" property of the "bookings" state
+            type="date"
+            id="date"
+            name="date"
+            value={bookings.date}
             onChange={handleDateChange}
-          // The onChange event handler is set to the handleDateChange function );
+            required
           />
-                   {/* Label for time input */}
-          <label htmlFor="res-time">Choose time</label>
-         <select
-  id="res-time"
-  name="res-time"
-  value={bookings.time}
-  onChange={(e) => setbookings({ ...bookings, time: e.target.value })}
->
-            
-          
-  {availableTimes && availableTimes?.map((time) => (
-      <option key={time} value={time}>
-        {time}
-      </option>
-    ))}
-</select>
-          <label htmlFor="guests">Number of guests</label>
-          <input
-            type="number"
-            placeholder="1"
-            min="1"
-            max="10"     
-            id="guests"
-            name="guests"
-            value={bookings.guests}
-            onChange={(e) => setbookings({ ...bookings, guests: e.target.value })}
-          />
-          <label htmlFor="occasion">Occasion</label>
+         
+          <label htmlFor="time">Time:</label>
           <select
-            id="occasion"
-            name="occasion"
-            value={bookings.occasion}
-            onChange={(e) => setbookings({ ...bookings, occasion: e.target.value })}
-          >
+            id="time"
+            name="time"
+            required 
+            value={bookings.time}
+            onChange={(e) => {
+              setBookings({ ...bookings, time: e.target.value });
+              validateTime(e.target.value);
+           }}
             
-            <option>Birthday</option>
-            <option>Anniversary</option>
-            <option>Business meeting</option>
-            <option>Other</option>
-          </select>
-          <Link to="/booking-confirmed">
-            <input type="submit" value="Make Your reservation" />
-            </Link>
-        </form>
-      </section>                
-    </>
-  )
-}
+          >
+           
+         
+
+            {Array.isArray(availableTimes) &&
+availableTimes?.map((time) => (
+<option key={time} value={time}>
+{time}
+</option>
+))}</select>
+
+<label htmlFor="guests">Number of guests</label>
+<input
+type="number"
+id="guests"
+name="guests"
+required
+min="1"
+max="9"
+onChange={(e) => {
+setBookings({ ...bookings, guests: e.target.value });
+validateGuests(e.target.value);
+}}
+/>
+
+
+<label htmlFor="occasion">Occasion</label>
+<select
+id="occasion"
+name="occasion"
+required
+onChange={(e) => {
+setBookings({ ...bookings, occasion: e.target.value });
+validateOccasion(e.target.value);
+}}
+>
+<option value="">-- Please choose an occasion --</option>
+<option value="business">Business</option>
+<option value="casual">Casual</option>
+<option value="romantic">Romantic</option>
+</select>
+
+<button type="submit" className="booking-btn" >
+Book a table
+</button>
+</form>
+
+</main>
+</>
+);
+};
+
 export default BookingForm;

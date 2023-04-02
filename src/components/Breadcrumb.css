@@ -1,7 +1,14 @@
-.breadcrumb-container {
-  background-color: var(--highlight-color-white);
+.breadcrumb {
+
   padding: 10px;
   border-radius: 5px;
+
+  align-items: center;
+  justify-content: center;
+  
+  
+  left: 0;
+ 
 }
 
 .breadcrumb-list {
@@ -20,7 +27,7 @@
 }
 
 .breadcrumb-link {
-  color: var(--primary-color-green);
+  color: var(--primary-orange);
   text-decoration: none;
 }
 

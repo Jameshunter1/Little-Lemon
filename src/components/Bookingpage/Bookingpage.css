@@ -1,50 +1,81 @@
 .booking-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
+      grid-template-columns: repeat(12, 1fr);
 
-.form-header {
-  grid-column: 2 / span 10;
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.form {
-  grid-column: 2 / span 10;
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: var(--highlight-color-white);
-  border-radius: 5px;
-  justify-content: center;
+ display: grid;
+  align-items: center;
   justify-items: center;
+  height: 100vh;
+
+
+}
+.breadcrumb {
+  grid-column: 3/11;
+ 
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-header {
+    grid-column: 5/9;
+    text-align: center;
+
+margin: 0;
+}
+
+.booking-form {
+  grid-column: 5/9;
+
+  margin: auto;
+
+  background-color: var(--secondary-color-beige);
+  border-radius: 5px;
   padding: 40px;
 }
 
-.form label {
-  margin-bottom: 10px;
+.booking-form label {
+display: block;
+margin-bottom: 10px;
+font-weight: bold;
 }
 
-.form input[type="date"],
-.form input[type="number"],
-form select {
-  width: 100%;
-  padding: 12px 20px;
-  margin-bottom: 20px;
-  border: none;
-  border-bottom: 2px solid #ccc;
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form select {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: none;
+border-bottom: 2px solid #ccc;
+background-color: transparent;
+font-size: 16px;
 }
 
-.form input[type="submit"] {
-  background-color: var(--primary-color-yellow);
-  color: var(--highlight-color-black);
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
+.booking-form input[type="date"]::-webkit-calendar-picker-indicator {
+filter: invert(1);
 }
 
-.form input[type="submit"]:hover {
-  background-color: var(--secondary-color-orange);
+.booking-form button[type="submit"] {
+background-color: var(--primary-color-yellow);
+color: var(--highlight-color-black);
+padding: 14px 20px;
+margin: 20px 0 10px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+font-size: 16px;
+transition: background-color 0.2s ease;
+}
+
+.booking-form button[type="submit"]:hover {
+background-color: var(--secondary-color-orange);
+}
+
+.booking-form button[type="submit"]:focus {
+outline: none;
+}
+
+.booking-form .form-message {
+color: red;
+font-weight: bold;
+margin-top: 10px;
 }
