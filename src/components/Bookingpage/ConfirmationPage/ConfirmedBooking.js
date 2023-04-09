@@ -8,8 +8,8 @@ const ConfirmedBooking = () => {
       <main className="confirmation-box">
         <Breadcrumb
           paths={[
-            { name: "Home", url: "/" },
-            { name: "Booking", url: "/booking" },
+            { name: 'Home', url: '/' },
+            { name: 'Booking', url: '/booking' },
           ]}
         />
 
@@ -34,6 +34,6 @@ const ConfirmedBooking = () => {
       </main>
     </>
   );
-}
+};
 
-export default ConfirmedBooking
+export default ConfirmedBooking;

@@ -17,14 +17,14 @@ const Nav = () => {
         <Link to="/menu" className="nav-item">
           Menu
         </Link>
-        <Link to="/reserve" className="nav-item">
+        <Link to="/booking" className="nav-item">
           Reservation
         </Link>
         <Link to="/contact" className="nav-item">
           Contact
         </Link>
-        <Link to="/booking" className="nav-item">
-          Order Online
+        <Link to="/login" className="nav-item">
+          Login
         </Link>
       </ul>
     </nav>

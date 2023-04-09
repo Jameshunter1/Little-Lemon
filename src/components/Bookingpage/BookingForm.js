@@ -77,42 +77,49 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handle
   return (
     <>
       <main className="booking-container">
-        <Breadcrumb paths={[{ name: "Home", url: "/" }]} />
-        <h1 className="form-header">Book a table with us!</h1>
-
+        <h1 className="form-header">Reservations</h1>{' '}
         <form className="booking-form" onSubmit={handleSubmit}>
-          <section className="header-background">
-            <section className="booking-row1">
-              <label htmlFor="indoor">
-                Indoor Seating
-                <input type="radio" className="indoor" />
-              </label>
-              <label htmlFor="outdoor">
-                Outdoor Seating
-                <input type="radio" className="outdoor" />
-              </label>
-            </section>
-            <section className="booking-row2">
-              <label htmlFor="date" className="date-label">
-                Date
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  value={bookings.date}
-                  onChange={handleDateChange}
-                  required
-                  placeholder="Select a date"
-                />
-              </label>
-              <label htmlFor="time" className="time-label">
-                Time
-              </label>
+          <article className="booking-row1">
+            <label htmlFor="indoor">
+              Indoor Seating</label>
+              <input
+                type="radio"
+                className="indoor"
+                id="indoor"
+                name="seating"
+              />
+            
+            <label htmlFor="outdoor"> 
+              Outdoor Seating</label>
+              <input
+                type="radio"
+                className="outdoor"
+                id="outdoor"
+                name="seating"
+              />
+           
+          </article>
+          <article className="booking-row2">
+            <label htmlFor="date" className="date-label">
+              Date
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value={bookings.date}
+                onChange={handleDateChange}
+                required
+                placeholder="Select a date"
+              /></label>
+            
+            <label htmlFor="time" className="time-label">
+              Time 
               <select
                 id="time"
                 name="time"
                 required
                 value={bookings.time}
+                
                 onChange={(e) => {
                   setBookings({ ...bookings, time: e.target.value });
                   validateTime(e.target.value);
@@ -124,12 +131,12 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handle
                       {time}
                     </option>
                   ))}
-              </select>
-            </section>
-            <section className="booking-row3">
-              <label htmlFor="guests" className="guest-label">
-                Number of guests
-              </label>
+              </select></label>
+           
+          </article>
+          <article className="booking-row3">
+            <label htmlFor="guests" className="guest-label">
+              Number of guests 
               <input
                 type="number"
                 id="guests"
@@ -141,10 +148,10 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handle
                   setBookings({ ...bookings, guests: e.target.value });
                   validateGuests(e.target.value);
                 }}
-              />
-              <label htmlFor="occasion" className="occasion-label">
-                Occasion
-              </label>
+              /></label>
+           
+            <label htmlFor="occasion" className="occasion-label">
+              Occasion
               <select
                 id="occasion"
                 name="occasion"
@@ -158,12 +165,14 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handle
                 <option value="business">Business</option>
                 <option value="casual">Casual</option>
                 <option value="romantic">Romantic</option>
-              </select>
-            </section>
-          </section>
+              </select>{' '}</label>
+            
+          </article>
+<article className="booking-row4">
           <button type="submit" className="booking-btn">
             Reserve a table
-          </button>
+            </button>
+            </article>
         </form>
       </main>
     </>
