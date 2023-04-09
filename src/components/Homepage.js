@@ -9,12 +9,10 @@ import Testimonials from "./Testimonials/Testimonials";
 const Homepage = () => {
   return (
     <>
-      <Nav />
       <Header />
       <Main />
       <Testimonials />
       <About />
-
       <Footer />
     </>
   );

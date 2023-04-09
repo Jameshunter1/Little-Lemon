@@ -76,86 +76,98 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handle
 
   return (
     <>
-      <main className='booking-container'>
-     
-       <Breadcrumb  paths={[
-        { name: 'Home', url: '/' },
-        
-   
-        ]}  />
-        <h1 className="form-header">Book a table with us!</h1>  
+      <main className="booking-container">
+        <Breadcrumb paths={[{ name: "Home", url: "/" }]} />
+        <h1 className="form-header">Book a table with us!</h1>
+
         <form className="booking-form" onSubmit={handleSubmit}>
-          <label htmlFor="date">Date:</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            value={bookings.date}
-            onChange={handleDateChange}
-            required
-          />
-         
-          <label htmlFor="time">Time:</label>
-          <select
-            id="time"
-            name="time"
-            required 
-            value={bookings.time}
-            onChange={(e) => {
-              setBookings({ ...bookings, time: e.target.value });
-              validateTime(e.target.value);
-           }}
-            
-          >
-           
-         
-
-            {Array.isArray(availableTimes) &&
-availableTimes?.map((time) => (
-<option key={time} value={time}>
-{time}
-</option>
-))}</select>
-
-<label htmlFor="guests">Number of guests</label>
-<input
-type="number"
-id="guests"
-name="guests"
-required
-min="1"
-max="9"
-onChange={(e) => {
-setBookings({ ...bookings, guests: e.target.value });
-validateGuests(e.target.value);
-}}
-/>
-
-
-<label htmlFor="occasion">Occasion</label>
-<select
-id="occasion"
-name="occasion"
-required
-onChange={(e) => {
-setBookings({ ...bookings, occasion: e.target.value });
-validateOccasion(e.target.value);
-}}
->
-<option value="">-- Please choose an occasion --</option>
-<option value="business">Business</option>
-<option value="casual">Casual</option>
-<option value="romantic">Romantic</option>
-</select>
-
-<button type="submit" className="booking-btn" >
-Book a table
-</button>
-</form>
-
-</main>
-</>
-);
+          <section className="header-background">
+            <section className="booking-row1">
+              <label htmlFor="indoor">
+                Indoor Seating
+                <input type="radio" className="indoor" />
+              </label>
+              <label htmlFor="outdoor">
+                Outdoor Seating
+                <input type="radio" className="outdoor" />
+              </label>
+            </section>
+            <section className="booking-row2">
+              <label htmlFor="date" className="date-label">
+                Date
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  value={bookings.date}
+                  onChange={handleDateChange}
+                  required
+                  placeholder="Select a date"
+                />
+              </label>
+              <label htmlFor="time" className="time-label">
+                Time
+              </label>
+              <select
+                id="time"
+                name="time"
+                required
+                value={bookings.time}
+                onChange={(e) => {
+                  setBookings({ ...bookings, time: e.target.value });
+                  validateTime(e.target.value);
+                }}
+              >
+                {Array.isArray(availableTimes) &&
+                  availableTimes?.map((time) => (
+                    <option key={time} value={time}>
+                      {time}
+                    </option>
+                  ))}
+              </select>
+            </section>
+            <section className="booking-row3">
+              <label htmlFor="guests" className="guest-label">
+                Number of guests
+              </label>
+              <input
+                type="number"
+                id="guests"
+                name="guests"
+                required
+                min="1"
+                max="9"
+                onChange={(e) => {
+                  setBookings({ ...bookings, guests: e.target.value });
+                  validateGuests(e.target.value);
+                }}
+              />
+              <label htmlFor="occasion" className="occasion-label">
+                Occasion
+              </label>
+              <select
+                id="occasion"
+                name="occasion"
+                required
+                onChange={(e) => {
+                  setBookings({ ...bookings, occasion: e.target.value });
+                  validateOccasion(e.target.value);
+                }}
+              >
+                <option value="">-- Please choose an occasion --</option>
+                <option value="business">Business</option>
+                <option value="casual">Casual</option>
+                <option value="romantic">Romantic</option>
+              </select>
+            </section>
+          </section>
+          <button type="submit" className="booking-btn">
+            Reserve a table
+          </button>
+        </form>
+      </main>
+    </>
+  );
 };
 
 export default BookingForm;

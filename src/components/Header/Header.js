@@ -11,7 +11,7 @@ const Header = () => {
     <>
       <main className='header-container'>
         <section className='header-background'>
-            <section className="content-left">
+            <article className="content-left">
             
             <h2 className='header-title'>Little Lemon</h2>
             <p className='header-subtitle'>Chicago</p>
@@ -28,7 +28,7 @@ const Header = () => {
             </Link>
               
     
-        </section>    
+        </article>    
 <section className='content-right'>    
 <img className="image"src={food} alt="food" width="296px" height="342px"/>     
 </section>

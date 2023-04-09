@@ -6,10 +6,12 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage.js";
 import BookingPage from './components/Bookingpage/Bookingpage.js';
 import ConfirmedBooking from "./components/Bookingpage/ConfirmationPage/ConfirmedBooking.js";
+import Nav from "./components/Nav/Nav.js";
 
 function App() {
   return (
     <>
+      <Nav/>
       <Routes>
         <Route path="/booking" element={<BookingPage />} />
         <Route exact path="/booking-confirmed" element={<ConfirmedBooking/>} />
