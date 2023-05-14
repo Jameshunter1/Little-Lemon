@@ -16,27 +16,41 @@
   display: flex;
  flex-wrap: wrap;
   grid-column: 6/11;
-justify-content: space-evenly; 
+justify-content: space-around; 
   margin: 0;
   padding: 0;
   text-align: center;
-}  .nav-item{
+}  
+.nav-item{
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   line-height: 23.5px;
-  text-transform: capitalize;
+
   color: var(--highlight-color-black);
-  padding: 5px;
+ 
 }
 .nav-item:hover{
   
-  border: 2px solid var(--highlight-color-white);
   border-radius: 5px;
-  padding: 5px;
+
 
 background-color: var(--primary-color-green);
   color:var(--highlight-color-white)
 
 }
 
+@media screen and (max-width: 746px) {
+  .nav-container {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+    
+    
+  }
+.nav-item, .navbar-links
+{
+padding: 10px 5px;
+}
+}

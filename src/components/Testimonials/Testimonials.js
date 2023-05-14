@@ -19,7 +19,7 @@ const Testimonials = () => {
             className="person1"
             src={persona1}
             alt="person"
-            width="100px"
+            width="80px"
               height="80px"
              
           /> <h3> Janet Hart </h3>
@@ -40,7 +40,7 @@ const Testimonials = () => {
             className="person2"
             src={persona2}
             alt="lemon dessert"
-            width="100px"
+            width="80px"
             height="80px"
           />
          <h3>Jane Fonda</h3>
@@ -58,7 +58,7 @@ const Testimonials = () => {
             className="person3"
             src={persona3}
             alt="lemon dessert"
-            width="100px"
+            width="80px"
             height="80px"
           /> <h3>Rick Ross</h3>
         <q>The Little Lemon's dishes burst with fresh, zesty flavors! A must-try for anyone craving a refreshing meal.</q>
@@ -75,7 +75,7 @@ const Testimonials = () => {
             className="person3"
             src={persona4}
             alt="lemon dessert"
-            width="100px"
+            width="80px"
             height="80px"
           /><h3>Rick Ross</h3>
         <q>This cozy restaurant may be small, but its menu packs a big punch. The Little Lemon's fusion of sweet and savory flavors is simply delightful.</q><section className='stars'>

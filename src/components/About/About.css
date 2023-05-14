@@ -2,12 +2,16 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap:10px;
-    padding-top: 60px;
+   margin-top: 50px;
     
     }
     
-    .about-left {display:grid;
-    grid-column: 3/6;
+    .about-left {
+      
+      flex-direction: column;
+      justify-content: center;
+      grid-column: 3/6;
+ 
     align-items: center;
    
     }
@@ -17,19 +21,20 @@ font-weight: 400;
 line-height: 75px;
 letter-spacing: 0em;
 
+
     }
     .about-right {
-      display:flex;
+    
     grid-column: 8/10;
 
-   flex-wrap: wrap;
+  
     }
     
     .mario {
   position: relative;
-    z-index: 2;
-top: 70px;
- left:50px;
+  z-index: 2;
+  top: 70px;
+
     
     }
     
@@ -38,38 +43,43 @@ top: 70px;
     z-index: 1;
     right:70px;
  
-    
-
     }
 
    /*Media Queries*/
    
 @media screen and (max-width: 746px) {
   .about-container {
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    flex-wrap: wrap;
+    display:flex;
+ 
   }
   .about-left {
-grid-column: 3/11;
+
   
   align-content: center;
   }
   .about-right {
-    display:flex;
- grid-column: 3/11;
- justify-content: center;
+   
+   
+
+
+ padding-top: 40px;
+
+
       }
 
   .mario {
-  width: 50%;
-    height:100%;
+    position: relative;
+   top:70px;
+   
+  
   z-index: 2;
     
   }
-  .adrian {  width: 50%;
+  .adrian {  
+    position:relative;
+    right:70px;
     z-index: 1;
-    height:100%;
+
     
     
   }
