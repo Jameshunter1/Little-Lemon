@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import './BookingPage.css';
+import './Bookingpage.css';
 import BookingForm from './BookingForm';
 import { fetchAPI, submitAPI } from './BookingAPI';
 import { useNavigate } from 'react-router-dom';
