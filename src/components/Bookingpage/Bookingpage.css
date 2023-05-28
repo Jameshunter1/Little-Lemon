@@ -2,17 +2,20 @@
   display:grid;
   grid-template-columns: repeat(12, 1fr);
   background: var(--primary-color-green);
+  justify-items: center;
 }
 .form-header {
   grid-column: 3/11;
   color: var(--primary-color-yellow);
   font-size: 48px;
   font-weight: 600;
+  justify-items: center;
 
 }
 .booking-form {
  display:grid;
  grid-column: 3/11;
+
     
 }
 .booking-row4
@@ -33,7 +36,7 @@
 .booking-row3
 {
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   color: var(--highlight-color-white);
   font-size: 16px;
   font-weight: 600;
@@ -47,7 +50,7 @@
 input,
 .outdoor, 
 .indoor { 
-  width: 200px;
+  width: 40px;
 }
 input[type=date],
 input[type=text],
@@ -61,6 +64,8 @@ input[type=time],
   border-radius: 5px;
   width: 350px;
   height: 60px;
+  font-size: 16px;
+  padding:2px;
 }
 label {
   display: flex;
@@ -77,8 +82,11 @@ label {
   color: var(--highlight-color-black);
   border-radius: 5px;
   cursor: pointer;
-  font-size: 24px ;
+  font-size: 24px;
+  width:200px;
+  height:50px;
   font-weight: 600;
+  
 }
 
 
@@ -99,6 +107,7 @@ label {
   .booking-form {
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
     
   }
 
@@ -119,6 +128,7 @@ input,
 .indoor { 
  
   display:flex;
-  width:20px;
+  width:30px;
 }
+
 }

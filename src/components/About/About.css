@@ -3,11 +3,9 @@
     grid-template-columns: repeat(12, 1fr);
     gap:10px;
    margin-top: 50px;
-    
     }
     
     .about-left {
-      
       flex-direction: column;
       justify-content: center;
       grid-column: 3/6;
@@ -16,10 +14,10 @@
    
     }
     .about-heading {
-font-size: 64px;
-font-weight: 400;
-line-height: 75px;
-letter-spacing: 0em;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 75px;
+    letter-spacing: 0em;
 
 
     }
@@ -49,35 +47,25 @@ letter-spacing: 0em;
    
 @media screen and (max-width: 746px) {
   .about-container {
-    display:flex;
+   display:block;
+   justify-items: center;
  
   }
   .about-left {
 
-  
+  padding:30px;
   align-content: center;
   }
-  .about-right {
-   
-   
-
-
- padding-top: 40px;
-
-
-      }
 
   .mario {
-    position: relative;
-   top:70px;
-   
+  
+   left:100px;
   
   z-index: 2;
     
   }
   .adrian {  
-    position:relative;
-    right:70px;
+    left:70px;
     z-index: 1;
 
     

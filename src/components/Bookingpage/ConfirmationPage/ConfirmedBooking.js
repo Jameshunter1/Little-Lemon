@@ -1,7 +1,7 @@
 import React from 'react';
 import Breadcrumb from '../../Breadcrumb.js';
 import './ConfirmedBooking.css';
-import confirm from '../../../images/foodvid.mp4';
+
 const ConfirmedBooking = () => {
   return (
     <>
