@@ -168,7 +168,7 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, submitForm, handle
             
           </article>
 <article className="booking-row4">
-          <button type="submit" className="booking-btn">
+          <button type="submit" className="booking-btn" disabled={!formValid}>
             Reserve a table
             </button>
             </article>
