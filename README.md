@@ -1,5 +1,7 @@
 # Little Lemon Restaurant
 
+As part of the Meta Front-end developer program on Coursera, this project involves creating a highly responsive website with a table-booking feature, developed using React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
