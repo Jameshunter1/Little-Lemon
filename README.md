@@ -1,74 +1,33 @@
-# Little Lemon Restaurant
+# Little Lemon — Table Reservations
 
-As part of the Meta Front-end developer program on Coursera, this project involves creating a highly responsive website with a table-booking feature, developed using React. It makes an API call to fetch random times when different dates are selected.
+![React](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![React Router](https://img.shields.io/badge/React_Router_6-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
+![Testing Library](https://img.shields.io/badge/Tested_with-React_Testing_Library-E33332?style=flat-square&logo=testinglibrary&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-# Getting Started with Create React App
+Capstone for the **Meta Front-End Developer Certificate**: the website for Little Lemon, a family-run Mediterranean restaurant, with a working **table-reservation flow** as the core feature.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What It Does
 
-## Available Scripts
+* **Book a table** — a reservation form for date, time, and party details, driven by the course's booking API
+* **Validated inputs** — client-side validation keeps the submit button honest until the form is complete and sensible
+* **Multi-page navigation** — React Router 6 routes across the site, including the booking flow
+* **Responsive layout** — built from the capstone's design spec, working across desktop and mobile
 
-In the project directory, you can run:
+## Tech
 
-### `npm start`
+React 18 (Create React App), React Router 6, and unit tests with **React Testing Library + Jest** covering the booking flow.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run It
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone https://github.com/Jameshunter1/Little-Lemon.git
+cd Little-Lemon
+npm install
+npm start        # dev server on :3000
+npm test         # run the test suite
+```
 
-### `npm test`
+## Credit
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built as the capstone of the [Meta Front-End Developer Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer) — brand and design spec are the course's; implementation and tests are my own. MIT licensed.
